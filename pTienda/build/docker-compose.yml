@@ -1,0 +1,11 @@
+version: 3
+services:
+  web:
+    build:
+      context: $(DIR_FILES)
+      dockerfile: ./Dockerfile
+    env_file:
+      - ./.env
+    ports:
+      -$(PUERTO):80
+    # volumes:
